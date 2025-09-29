@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Se Ela Souber</title>
+  <meta name="description" content="Poemas ilustrados do livro Se Ela Souber." />
+  <link rel="icon" type="image.png" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Paleta: cereja e dourado */
+    :root{--cereja:#7b0b1a; --cereja-2:#a71b2a; --dourado:#d4a12a;}
+    body{background:linear-gradient(180deg, var(--cereja) 0%, #4a0f12 50%, #2b0a0a 100%);} 
+    .glass { background: linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02)); backdrop-filter: blur(6px); }
+    .book-icon { width:72px; height:96px; display:block }
+    .btn-buy{ background:linear-gradient(90deg,var(--dourado), #f6d96a); color:#1a0a00; }
+    .btn-page{ background: rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.06); }
+  </style>
+  
+</head>
+
+<body class="min-h-screen text-slate-100 font-sans">
+  <main class="relative z-10 mx-auto max-w-lg px-6 py-16 mt-8">
+        <!-- Cabeçalho -->
+  <header class="max-w-5xl mx-auto px-6 py-10 text-center">
+    <div class="inline-flex items-center gap-4">
+      
+      <div class="text-left">
+        <h1 class="text-3xl font-extrabold text-white">Se Ela Souber - Kaio H.</h1>
+        <p class="text-sm mt-1 text-amber-100/70">Serie de livros Se Ela Souber - Site Oficial</p>
+      </div>
+    </div>
+  </header>
+
+  
+    <!-- Grid com cards que apresentam ícone do livro -->
+    <section id="book-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Card 1 -->
+      <article class="bg-gradient-to-br from-red-900 to-yellow-600 text-white rounded-2xl p-6 shadow-lg hover:scale-[1.05]
+       transition-transform flex flex-col items-start gap-4 mx-auto w-max " data-book="1">
+
+        <!-- ícone de livro como 'capa' -->
+        <div class="flex items-center gap-6 w-full ">
+          <img src="SeElaSouber_Fisico.png" alt="Capa Se Ela Souber" class="book-icon object-cover rounded">
+          <div class="flex-1">
+            <h2 class="text-xl font-bold">Se Ela Souber</h2>
+            <p class="text-sm text-amber-50/80 mt-1">Um livro que fala do que vive, primeiro livro da saga.</p>
+          </div>
+        </div>
+        <div class="mt-2 w-full flex gap-3">
+          <!-- Agora 'Ver página' abre outra página HTML -->
+          <a href="SeElaSouber_Main.html" class="btn-page flex-1 py-2 rounded-lg text-center">Ver página do livro</a>
+          <!-- Botão Comprar atualiza a área de compras na mesma página (JS) -->
+          <button class="btn-buy flex-1 py-2 rounded-lg font-semibold" data-action="open-purchase">Comprar</button>
+        </div>
+      </article>
+
+        </section>
+
+    <!-- Área de detalhes do livro (inicialmente oculta) -->
+     <section id="book-detail" class="mt-12 glass rounded-2xl p-6 shadow-lg hidden">
+      <div class="flex items-start gap-6">
+        
+        <div class="flex-1">
+          <h3 id="detail-title" class="text-2xl font-extrabold">Se Ela Souber</h3>
+          <p id="detail-sub" class="text-amber-100/80 mt-2">Poemas do livro físico — versão digital e física disponíveis.</p>
+
+          <div id="purchase-area" class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-3">
+            <button id="buy-digital" class="px-4 py-2 rounded-lg text-center">Comprar eBook</button>
+            <button id="buy-physical" class="px-4 py-2 rounded-lg text-center">Comprar físico</button>
+          </div>
+        </div>
+      </div>
+
+            <div class="mt-6 text-right">
+        <button id="close-detail" class="px-4 py-2 rounded-lg border">Fechar</button>
+      </div>
+    </section>
+
+    <!-- Seção comprar (âncora) - mantém referência, mas Compra abre a área 'purchase-area' acima sem navegar -->
+    <section id="comprar" class="mt-12 glass rounded-2xl p-6 shadow-lg">
+      <h4 class="text-lg font-bold text-amber-100">Outras páginas</h4>
+      <p class="text-amber-100/80 mt-2"></p>
+      <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-3">
+        <a id="link-loja" href="https://www.instagram.com/kaiohenr1/reels" class="block p-4 rounded bg-[rgba(255,255,255,0.03)]">Intagram do Autor</a>
+        <a id="link-amazon" href="https://www.amazon.com.br/s?i=digital-text&rh=p_27%3AKaio%2BHenrique&s=relevancerank&text=Kaio+Henrique&ref=dp_byline_sr_ebooks_1" class="block p-4 rounded bg-[rgba(255,255,255,0.03)]">Amazon / Estante Virtual</a>
+        <a id="link-dist" href="https://loja.uiclap.com/autor/kaio-h" class="block p-4 rounded bg-[rgba(255,255,255,0.03)]">UiClap / Estante Física</a>
+      </div>
+    </section>
+
+ 
+
+  <footer class="max-w-5xl mx-auto px-6 py-8 text-amber-100/70 text-sm">
+    <div class="flex items-center justify-between">
+      <div>© <strong>Kaio Henrique</strong> — Se Ela Souber — 2025</div>
+      <div class="flex gap-3 items-center">
+      </div>
+    </div>
+  </footer>
+  </main>
+
+  <script>
+    // Elementos
+    const buyButtons = document.querySelectorAll('[data-action="open-purchase"]');
+    const detail = document.getElementById('book-detail');
+    const detailTitle = document.getElementById('detail-title');
+    const detailSub = document.getElementById('detail-sub');
+    const buyDigital = document.getElementById('buy-digital');
+    const buyPhysical = document.getElementById('buy-physical');
+    
+    const closeBtn = document.getElementById('close-detail');
+
+    // Dados dos livros (substituir pelos links reais)
+    const BOOKS = {
+      1: { title:'Se Ela Souber', sub:'Escrito Por Kaio H.', buyDigital:'https://www.amazon.com.br/Se-Ela-Souber-Kaio-Henrique-ebook/dp/B0FM1NN2BM/ref=sr_1_1', buyPhysical:'https://loja.uiclap.com/titulo/ua113416/'},
+      2: { title:'Quando Eu Soube', sub:'Descrição breve', buyDigital:'#', buyPhysical:'#'},
+      3: { title:'Se Eu Escrevesse', sub:'Em andamento.', buyDigital:'#', buyPhysical:'#'}
+    };
+
+    buyButtons.forEach(btn=> btn.addEventListener('click', (e)=>{
+      // descobrir article
+      const art = e.target.closest('article');
+      const id = art?.dataset?.book || 1;
+      const info = BOOKS[id];
+      // atualizar área de detalhes/purchase sem sair da página
+      detailTitle.textContent = info.title;
+      detailSub.textContent = info.sub;
+      buyDigital.onclick = ()=> window.open(info.buyDigital,'_blank');
+      buyPhysical.onclick = ()=> window.open(info.buyPhysical,'_blank');
+     
+      // opcional: atualizar preview de capa (aqui apenas cor)
+  
+      // mostrar painel de detalhes (se estiver oculto)
+      detail.classList.remove('hidden');
+      detail.scrollIntoView({behavior:'smooth', block:'start'});
+    }));
+
+    // fechar detalhe
+    closeBtn.addEventListener('click', ()=>{ detail.classList.add('hidden'); window.scrollTo({top:0, behavior:'smooth'}); });
+
+    // Tabs simples
+    const tabs = document.querySelectorAll('.detail-tab');
+    const panes = document.querySelectorAll('.tab-pane');
+    tabs.forEach(tab=> tab.addEventListener('click', ()=>{
+      const name = tab.textContent.trim();
+      panes.forEach(p=> p.classList.add('hidden'));
+      document.querySelector(`.tab-pane[data-tab="${name}"]`)?.classList.remove('hidden');
+    }));
+  </script>
+</body>
+</html>
+
