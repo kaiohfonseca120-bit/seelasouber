@@ -8,9 +8,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
+ <style>
+    :root { color-scheme: light dark; }
     body{ font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
     .glass{ backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+  </style>
+  <style>
+    /* Paleta: cereja e dourado */
+    :root{--cereja:#7b0b1a; --cereja-2:#a71b2a; --dourado:#d4a12a;}
+    body{background:linear-gradient(180deg, var(--cereja) 0%, #4a0f12 50%, #2b0a0a 100%);} 
+    .glass { background: linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02)); backdrop-filter: blur(6px); }
+    .book-icon { width:72px; height:96px; display:block }
+    .btn-buy{ background:linear-gradient(90deg,var(--dourado), #f6d96a); color:#1a0a00; }
+    .btn-page{ background: rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.06); }
   </style>
 </head>
 <body class="min-h-screen bg-gradient-to-b from-slate -950 via-slate-900 to-slate-950 text-slate-100">
@@ -588,6 +598,7 @@
   </script>
 </body>
 </html>
+
 
 
 
