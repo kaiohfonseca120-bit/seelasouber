@@ -15,7 +15,7 @@
     :root{--cereja:#7b0b1a; --cereja-2:#a71b2a; --dourado:#d4a12a;}
     body{background:linear-gradient(180deg, var(--cereja) 0%, #4a0f12 50%, #2b0a0a 100%);} 
     .glass { background: linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02)); backdrop-filter: blur(6px); }
-    .book-icon { width:72px; height:96px; display:block }
+    .book-icon { max-width: 80px; height: auto; }
     .btn-buy{ background:linear-gradient(90deg,var(--dourado), #f6d96a); color:#1a0a00; }
     .btn-page{ background: rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.06); }
   </style>
@@ -45,13 +45,13 @@
 
         <!-- ícone de livro como 'capa' -->
         <div class="flex items-center gap-6 w-full ">
-          <img src="SeElaSouber_Fisico.png" alt="Capa Se Ela Souber" class="book-icon object-cover rounded">
+         <img src="SeElaSouber_Fisico.png" alt="Capa Se Ela Souber" class="book-icon object-contain mx-auto">
           <div class="flex-1">
             <h2 class="text-xl font-bold">Se Ela Souber</h2>
             <p class="text-sm text-amber-50/80 mt-1">Um livro que fala do que vive, primeiro livro da saga.</p>
           </div>
         </div>
-        <div class="mt-2 w-full flex gap-3">
+        <div class="mt-2 w-full flex flex-col sm:flex-row gap-3">
           <!-- Agora 'Ver página' abre outra página HTML -->
           <a href="SeElaSouber_Main.html" class="btn-page flex-1 py-2 rounded-lg text-center">Ver página do livro</a>
           <!-- Botão Comprar atualiza a área de compras na mesma página (JS) -->
@@ -153,5 +153,6 @@
   </script>
 </body>
 </html>
+
 
 
