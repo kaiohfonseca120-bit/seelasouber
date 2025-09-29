@@ -9,28 +9,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
- <style>
-    :root { color-scheme: light dark; }
-    body{ font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
-    .glass{ backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+   <style>
+    /* Paleta: cereja e dourado */
+    :root{--cereja:#1b0004; --cereja-2:#440007; --dourado:#126781;}
+    body{background:linear-gradient(180deg, var(--cereja) 0%, #3a0507 50%, #2b0a0a 100%);} 
+    .glass { background: linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02)); backdrop-filter: blur(6px); }
+    .book-icon { width:72px; height:96px; display:block }
+    .btn-buy{ background:linear-gradient(90deg,var(--dourado), #f6d96a); color:#1a0a00; }
+    .btn-page{ background: rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.06); }
   </style>
 </head>
-<body class="min-h-screen bg-gradient-to-b from-slate -950 via-slate-900 to-slate-950 text-slate-100">
-  <style>
-    :root { color-scheme: light dark; }
-    body{ font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
-    .glass{ backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
-  </style>
+<body class="min-h-screen bg-gradient-to-black from-slate -950 via-slate-900 to-slate-950 text-slate-100">
+  
   <!-- Fundo decorativo -->
   <div aria-hidden="true" class="pointer-events-none fixed inset-0 overflow-hidden">
     <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[36rem] h-[36rem] rounded-full blur-3xl opacity-25 bg-fuchsia-500"></div>
     <div class="absolute -bottom-24 left-16 w-[28rem] h-[28rem] rounded-full blur-3xl opacity-20 bg-cyan-400"></div>
   </div>
-  <style>
-    :root { color-scheme: light dark; }
-    body{ font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
-    .glass{ backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
-  </style>
 
   <main class="relative z-10 mx-auto max-w-lg px-6 py-16">
     <section class="text-center">
@@ -601,7 +596,6 @@
   </script>
 </body>
 </html>
-
 
 
 
