@@ -61,6 +61,26 @@
         </div>
       </article>
 
+        <!-- Card 2 -->
+      <article class="bg-gradient-to-br from-blue-900 to-blue-600 text-white rounded-2xl p-6 shadow-lg hover:scale-[1.05]
+       transition-transform flex flex-col items-start gap-4 mx-auto w-full max-w-sm mx-auto" data-book="2">
+
+        <!-- ícone de livro como 'capa' -->
+        <div class="flex items-center gap-6 w-full ">
+         <img src="" alt="Capa Quando Eu Soube" class="book-icon object-contain mx-auto">
+          <div class="flex-1">
+            <h2 class="text-xl font-bold">Quando Eu Soube</h2>
+            <p class="text-sm text-amber-50/80 mt-1">Em desenvolvimento... Segundo livro da saga.</p>
+          </div>
+        </div>
+        <div class="mt-2 w-full flex flex-col sm:flex-row gap-3">
+          <!-- Agora 'Ver página' abre outra página HTML -->
+          <a href="SeElaSouber_Main.html" class="btn-page flex-1 py-2 rounded-lg text-center">Ver página do livro</a>
+          <!-- Botão Comprar atualiza a área de compras na mesma página (JS) -->
+          <button class="btn-buy flex-1 py-2 rounded-lg font-semibold" data-action="open-purchase">Comprar</button>
+        </div>
+      </article>
+
         </section>
 
     <!-- Área de detalhes do livro (inicialmente oculta) -->
@@ -119,7 +139,7 @@
     // Dados dos livros (substituir pelos links reais)
     const BOOKS = {
       1: { title:'Se Ela Souber', sub:'Escrito Por Kaio H.', buyDigital:'https://www.amazon.com.br/Se-Ela-Souber-Kaio-Henrique-ebook/dp/B0FM1NN2BM/ref=sr_1_1', buyPhysical:'https://loja.uiclap.com/titulo/ua113416/'},
-      2: { title:'Quando Eu Soube', sub:'Descrição breve', buyDigital:'#', buyPhysical:'#'},
+      2: { title:'Quando Eu Soube', sub:'Escrito Por Kaio H., buyDigital:'#', buyPhysical:'#'},
       3: { title:'Se Eu Escrevesse', sub:'Em andamento.', buyDigital:'#', buyPhysical:'#'}
     };
 
@@ -155,6 +175,7 @@
   </script>
 </body>
 </html>
+
 
 
 
